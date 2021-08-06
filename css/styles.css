@@ -10,15 +10,13 @@ body {
   background-color: #f6b319;
   border-radius: 0;
   border: 0;
-
 }
-
 
 .navbar-brand {
   padding-top: 25px;
 }
 
-.navbar-brand h1 { /* Restaurant name */
+.navbar-brand h1 { /* page name */
   text-align: left;
   font-family: 'Lora', serif;
   color: #557c3e;
@@ -33,23 +31,16 @@ body {
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
-.navbar-brand p { /* Kosher cert */
-  color: #000;
-  text-transform: uppercase;
-  font-size: .7em;
-  margin-top: 15px;
-}
-.navbar-brand p span { /* Star-K */
-  vertical-align: middle;
-}
 
 #nav-list {
   margin-top: 10px;
 }
 #nav-list a {
-  color: #951C49;
+  color: maroon;
   text-align: center;
+  background:white;
 }
+
 #nav-list a:hover {
   background: #E7E7E7;
 }
@@ -57,27 +48,58 @@ body {
   font-size: 1.8em;
 }
 
+hr {
+  border-color: black;
+}
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
 }
 .navbar-header button.navbar-toggle {
   clear: both;
-  margin-top: -60px;
+  margin-top: -40px;
 }
 
+.container {
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+#collapsable-nav {
+  background-color: white;
+}
+
+#main-content {
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    color: black;
+    background-color: grey;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+li {
+  border-color: black;
+}
 
 /********** Large devices only **********/
-@media (min-width: 1200px) {
+@media (min-width: @screen-lg-min) {
   #button {
     display:none;
   }
   #header-nav {
     padding-bottom: 20px;
   }
+
 }
+
+
 /********** Medium devices only **********/
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
   /* Header */
   #button {
     display:none;
@@ -89,7 +111,7 @@ body {
 }
 
 /********** Small devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
   /* Home Page */
   #header-nav {
     padding-bottom: 20px;
@@ -99,7 +121,7 @@ body {
 }
 
 /********** Extra small devices only **********/
-@media (max-width: 767px) {
+@media (max-width: @screen-xs-max) {
   /* Header */
   .navbar-brand {
     padding-top: 10px;
@@ -139,10 +161,5 @@ body {
 
 h2, section {
   text-align: center;
-}
-
-#main-content{
-  color: black;
-  background-color: grey;
-  margin: 10px;
+  margin-right: 10px;
 }
