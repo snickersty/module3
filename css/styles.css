@@ -68,7 +68,7 @@ hr {
 	margin-bottom: 10px;
 	padding: 10px;
 }
-#collapsable-nav {
+#collapsable-nav visible-xs{
   background-color: white;
 }
 
